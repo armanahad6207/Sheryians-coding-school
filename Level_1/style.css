@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+.main{
+    height: 100%;
+    width: 100%;
+    background-color: #0f9141a9;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.main .box{
+    width: 20%;
+    height: 30%;
+    background-color: #5b49e4d0;
+}
+.box:nth-child(2){
+    background-color: #71caea;
+}
