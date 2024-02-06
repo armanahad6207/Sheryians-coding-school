@@ -112,3 +112,58 @@ nav h4{
     border-radius: 50%;
    
 }
+.work{
+   
+    width: 100%;
+    height: 60vh;
+    padding: 3vw 2vw;
+    border-bottom: 2px solid #000;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.work-part1{
+    width: 24%;
+    height: 100%;
+    display: flex;
+    
+    justify-content: space-between;
+    border-right: 2px solid #000;
+}
+.work-part1 h5{
+    font-size: 1.5vw;
+    margin-right: 2vw;
+    
+}
+.work-part2{
+    width: 76%;
+    height: 100%;
+    
+}
+.work-part2 .headings:nth-child(1){
+    border-bottom: 2px solid #000;
+}
+
+.headings{
+    display: flex;
+    padding: 2vw 3vw;
+ 
+    margin: 0 30px;
+}
+
+ .headings .content p{
+    margin-top: 10px;
+    line-height: 14px;
+    letter-spacing: .1px;
+    font-size: 1vw;
+    color: #555454;
+}
+.headings .content h1{
+    letter-spacing: -1.6px;
+    color: #303030;
+}
+.headings .content:nth-child(1){
+    margin-right: 2vw;
+    padding: 0 1vw;
+    border-right: 2px solid #000;
+}
