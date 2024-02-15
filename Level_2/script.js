@@ -1,14 +1,3 @@
-function searchoverlayhidden() {
-  document.querySelector("#searchinput").addEventListener("focus", () => {
-    document.querySelector("#search").style.display = "block";
-  });
-  document.querySelector("#searchinput").addEventListener("blur", () => {
-    document.querySelector("#search").style.display = "none";
-  });
-}
-
-searchoverlayhidden();
-
 var array = [
   {
     title: "fruits",
@@ -51,4 +40,31 @@ function displayTheCard() {
   document.querySelector(".container").innerHTML = clutter;
 }
 
+var input = document.querySelector("#searchinput");
+function searchoverlayhidden() {
+  input.addEventListener("focus", () => {
+    document.querySelector("#search").style.display = "block";
+    document.querySelector(".searchdata").style.display = "block";
+  });
+  input.addEventListener("blur", () => {
+    document.querySelector("#search").style.display = "none";
+    document.querySelector(".searchdata").style.display = "none";
+  });
+
+  input.addEventListener("input", () => {
+    const filteArrray = array.filter((obj) => {
+      return obj.title.toLocaleLowerCase().startsWith(input.value);
+    });
+    var clutter = "";
+    filteArrray.forEach((obj) => {
+      clutter += `<div class="res flex px-8 py-3">
+      <i class="ri-search-line font-semibold mr-5"></i>
+      <h3 class="font-semibold">${obj.title}</h3>
+  </div>`;
+    });
+    document.querySelector(".searchdata").innerHTML = clutter;
+  });
+}
+
+searchoverlayhidden();
 displayTheCard();
